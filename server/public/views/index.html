@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='myApp'>
+
+<head>
+
+    <title> Angular Magic</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="../scripts/clientapp.js"></script>
+</head>
+
+<body>
+    <div ng-controller="IndexController">
+        <h1>Omicron Angular Magic</h1>
+        <p>Name:
+            <input type="text" ng-model="name" />
+        </p>
+        <p ng-bind="name"></p>
+        <!-- ^^ this makes it so that text appears on the screen as you type it -->
+        <p>{{name}}</p>
+
+
+        {{total}}
+        <button ng-click="increment(total)">Plus One</button>
+
+        {{person}} {{person.name}} {{person.lastname}}
+
+
+        <div ng-repeat='person in people'>
+            {{person.firstname}} {{person.lastname}}
+        </div>
+
+        Count: {{people.length}}
+        <div ng-if="people.length < 5">
+            <button ng-click="addPerson()">add person</button>
+        </div>
+
+    </div>
+
+    <!-- Kris's code -->
+    <!-- <div ng-controller="IndexController">
+    <h1>&Omicron; Angular!</h1>
+
+    <p>Count: {{people.length}}</p>
+    <div ng-if="people.length < 5">
+      <button ng-click="addPerson()">Add Person</button>
+    </div>
+    <button ng-click="people.shift()">Remove Person</button>
+
+    <div ng-repeat="person in people" style="border: 1px solid red;">
+      <p>{{person.firstname}}</p>
+      <p>{{person.lastname}}</p>
+    </div>
+
+  </div> -->
+
+
+</body>
+
+</html>
+
+</html>
